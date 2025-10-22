@@ -27,7 +27,25 @@ flowchart TD
   H --> H4["GitHub repo / Dataset links"]
 
 ```
-
+```mermaid
+flowchart TD
+  A["Data Source - aqi.csv"] --> B["Data Ingestion & Storage"]
+  B --> C["Preprocessing"]
+  C --> C1["Parse datetime & convert types"]
+  C --> C2["Fill missing values & clean data"]
+  C --> D["Feature Engineering"]
+  D --> D1["Create month & pollutant features"]
+  D --> E["Analysis & Aggregation"]
+  E --> E1["Overall & city AQI"]
+  E --> E2["Monthly & pollutant-wise stats"]
+  E --> F["Visualization"]
+  F --> F1["Scatter, Bar, Line charts"]
+  F --> F2["Publication-ready figures"]
+  F --> G["Outputs"]
+  G --> G1["Report (PDF/DOCX)"]
+  G --> G2["Notebook (.ipynb)"]
+  G --> G3["Dashboard / GitHub links"]
+```
 Short explanation:
 
 Data Source → ingest CSV → store raw file.
